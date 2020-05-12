@@ -5,10 +5,12 @@
  */
 package ec.edu.ups.dao;
 
+import ec.edu.ups.idao.IUsuario;
+
 /**
  *
  * @author HI andres
  */
-public class UsuarioDAO {
+public class UsuarioDAO implements IUsuario {
     
 }
