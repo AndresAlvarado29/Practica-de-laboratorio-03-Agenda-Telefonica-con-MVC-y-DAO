@@ -5,7 +5,7 @@
  */
 package ec.edu.ups.controlador;
 
-import ec.edu.ups.dao.UsuarioDAO;
+import ec.edu.ups.dao.UsuarioDao;
 import ec.edu.ups.idao.IUsuario;
 import ec.edu.ups.modelo.Usuario;
 import ec.edu.ups.vista.VistaUsuario;
@@ -21,7 +21,7 @@ public class ControladorUsuario {
 
     public ControladorUsuario(VistaUsuario vistaUsuario) {
         this.vistaUsuario = vistaUsuario;
-        this.usuarioDAO = new UsuarioDAO();
+        this.usuarioDAO = new UsuarioDao();
     }
     
     public void registrar(){
