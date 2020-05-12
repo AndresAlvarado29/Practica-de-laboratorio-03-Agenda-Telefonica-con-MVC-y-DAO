@@ -6,6 +6,7 @@
 package ec.edu.ups.vista;
 
 import ec.edu.ups.modelo.Usuario;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -30,5 +31,14 @@ public Usuario crearUsuario(){
     System.out.println("Ingrese una contraseña");
     String contraseña = escribir.next();
 return new Usuario(cedula, nombre, apellido, correo, contraseña);
+}
+
+public void verUsuario(Usuario usuario){
+    System.out.println("Datos del usuario:"+ usuario);
+}
+public void verUsuario(List<Usuario> usuarios){
+    for (Usuario usuario : usuarios) {
+       System.out.println("Datos del usuario:"+ usuario); 
+    }
 }
 }
