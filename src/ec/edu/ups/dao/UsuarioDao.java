@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class UsuarioDao implements IUsuario {
 
-     private List<Usuario> listaUsuario;
+    private List<Usuario> listaUsuario;
 
     public UsuarioDao() {
         listaUsuario = new ArrayList<>();
@@ -31,7 +31,7 @@ public class UsuarioDao implements IUsuario {
     @Override
     public Usuario read(String cedula) {
         for (Usuario usuario : listaUsuario) {
-            if (usuario.getCedula().equals(usuario.getCedula())) {
+            if (usuario.getCedula().equals(cedula)) {
                 return usuario;
             }
         }
