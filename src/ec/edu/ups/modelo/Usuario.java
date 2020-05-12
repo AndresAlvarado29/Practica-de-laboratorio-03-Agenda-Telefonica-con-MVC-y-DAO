@@ -73,7 +73,7 @@ public class Usuario {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 17 * hash + Objects.hashCode(this.cedula);
+        hash = 37 * hash + Objects.hashCode(this.cedula);
         return hash;
     }
 
@@ -92,9 +92,16 @@ public class Usuario {
         if (!Objects.equals(this.cedula, other.cedula)) {
             return false;
         }
+        if (!Objects.equals(this.correo, other.correo)) {
+            return false;
+        }
+        if (!Objects.equals(this.contraseña, other.contraseña)) {
+            return false;
+        }
         return true;
     }
 
+    
    
 
     
