@@ -12,13 +12,16 @@ import java.util.Scanner;
  * @author HI andres
  */
 public class Test {
+
     public static void main(String[] args) {
         Scanner escribir = new Scanner(System.in);
+        int opc;
         System.out.println("********Agenda Telefónica********");
-        System.out.println("          ¡Bienvenido!         "+"\n");
-        System.out.println("[1]Iniciar sesión"+"  "+"[2]Registrarse");
-        System.out.println("[3]Salir");
-        
+        System.out.println("          ¡Bienvenido!         " + "\n");
+        System.out.println("[1]Iniciar sesión" + "  " + "[2]Registrarse" + "\n");
+        System.out.println("            [3]Salir");
+        System.out.print("\n"+"Ingrese la opción: ");
+        opc = escribir.nextInt();
     }
-    
+
 }
