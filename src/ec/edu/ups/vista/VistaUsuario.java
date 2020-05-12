@@ -19,6 +19,16 @@ public class VistaUsuario {
   escribir = new Scanner (System.in);
     }
 public Usuario crearUsuario(){
-return null;
+    System.out.println("Ingrese numero de cedula");
+    String cedula =  escribir.next();
+    System.out.println("Ingrese el nombre");
+    String nombre = escribir.next();
+    System.out.println("Ingrese el apellido");
+    String apellido= escribir.next();
+    System.out.println("Ingrese correo electronico");
+    String correo = escribir.next();
+    System.out.println("Ingrese una contraseña");
+    String contraseña = escribir.next();
+return new Usuario(cedula, nombre, apellido, correo, contraseña);
 }
 }

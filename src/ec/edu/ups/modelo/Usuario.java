@@ -73,7 +73,7 @@ public class Usuario {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 41 * hash + Objects.hashCode(this.cedula);
+        hash = 17 * hash + Objects.hashCode(this.cedula);
         return hash;
     }
 
@@ -94,6 +94,10 @@ public class Usuario {
         }
         return true;
     }
+
+   
+
+    
 
     @Override
     public String toString() {
