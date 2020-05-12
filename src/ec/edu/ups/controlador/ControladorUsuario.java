@@ -15,20 +15,35 @@ import ec.edu.ups.vista.VistaUsuario;
  * @author HI andres
  */
 public class ControladorUsuario {
- private VistaUsuario vistaUsuario;
- private Usuario usuario;
- private IUsuario usuarioDAO;
+
+    private VistaUsuario vistaUsuario;
+    private Usuario usuario;
+    private IUsuario usuarioDao;
 
     public ControladorUsuario(VistaUsuario vistaUsuario) {
         this.vistaUsuario = vistaUsuario;
-        this.usuarioDAO = new UsuarioDao();
+        this.usuarioDao = new UsuarioDao();
     }
-    
-    public void registrar(){
-    usuario = vistaUsuario.crearUsuario();
-    usuarioDAO.create(usuario);
+
+    public void registrar() {
+        usuario = vistaUsuario.crearUsuario();
+        usuarioDao.create(usuario);
     }
-    
- 
- 
+
+    public void comprobarUsuario(String correo, String contraseña) {
+
+        if (usuario != null) {
+            if (usuario.getCorreo().equals(correo) && usuario.getContraseña().equals(contraseña)) {
+                System.out.println("Inicio Satisfactorio");
+
+            } else {
+                System.out.println("correo o contraseña incorrecto ");
+            }
+        } else if (usuario == null) {
+            System.out.println("No exise");
+
+        }
+
+    }
+
 }
