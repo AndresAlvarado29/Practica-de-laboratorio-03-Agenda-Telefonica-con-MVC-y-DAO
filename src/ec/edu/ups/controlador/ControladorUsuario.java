@@ -35,7 +35,13 @@ public class ControladorUsuario {
         if (usuario != null) {
             if (usuario.getCorreo().equals(correo) && usuario.getContraseña().equals(contraseña)) {
                 System.out.println("Inicio Satisfactorio");
-
+ System.out.println("[1]Registrar teléfono");
+                        System.out.println("[2]Modificar informacion");
+                        System.out.println("[3]Eliminar teléfono");
+                        System.out.println("[4]Buscar teléfono ");
+                        System.out.println("[5]Listar teléfono");
+                        System.out.println("[6]Menu principal");
+                        System.out.print("\n" + "Ingrese la opción: ");
             } else {
                 System.out.println("correo o contraseña incorrecto ");
             }

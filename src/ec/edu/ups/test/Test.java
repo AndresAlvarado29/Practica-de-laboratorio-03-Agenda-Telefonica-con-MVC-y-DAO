@@ -41,14 +41,8 @@ public class Test {
                     System.out.println("Ingrese la contraseña");
                     String contraseña = escribir.next();
                     control.comprobarUsuario(correo, contraseña);
+                    
                     while (m2) {
-                        System.out.println("[1]Registrar teléfono");
-                        System.out.println("[2]Modificar informacion");
-                        System.out.println("[3]Eliminar teléfono");
-                        System.out.println("[4]Buscar teléfono ");
-                        System.out.println("[5]Listar teléfono");
-                        System.out.println("[6]regresar al menu principal");
-                        System.out.print("\n" + "Ingrese la opción: ");
                         opc = escribir.nextInt();
                         switch (opc) {
                             case 1:
