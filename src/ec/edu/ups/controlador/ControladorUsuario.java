@@ -18,16 +18,16 @@ public class ControladorUsuario {
 
     private VistaUsuario vistaUsuario;
     private Usuario usuario;
-    private IUsuario usuarioDAO;
+    private IUsuario usuarioConDAO;
 
     public ControladorUsuario(VistaUsuario vistaUsuario) {
         this.vistaUsuario = vistaUsuario;
-        this.usuarioDAO = new UsuarioDAO();
+        this.usuarioConDAO = new UsuarioDAO();
     }
 
     public void registrar() {
         usuario = vistaUsuario.crearUsuario();
-        usuarioDAO.create(usuario);
+        usuarioConDAO.create(usuario);
     }
 
     public void comprobarUsuario(String correo, String contraseña) {

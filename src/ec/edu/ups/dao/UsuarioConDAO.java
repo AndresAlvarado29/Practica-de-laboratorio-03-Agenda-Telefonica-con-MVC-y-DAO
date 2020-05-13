@@ -15,11 +15,11 @@ import java.util.List;
  *
  * @author HI andres
  */
-public class UsuarioDao implements IUsuario {
+public class UsuarioConDAO implements IUsuario {
 
     private List<Usuario> listaUsuario;
 
-    public UsuarioDao() {
+    public UsuarioConDAO() {
         listaUsuario = new ArrayList<>();
     }
 
