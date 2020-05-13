@@ -5,7 +5,7 @@
  */
 package ec.edu.ups.controlador;
 
-import ec.edu.ups.dao.UsuarioDao;
+import ec.edu.ups.dao.UsuarioDAO;
 import ec.edu.ups.idao.IUsuario;
 import ec.edu.ups.modelo.Usuario;
 import ec.edu.ups.vista.VistaUsuario;
@@ -18,16 +18,16 @@ public class ControladorUsuario {
 
     private VistaUsuario vistaUsuario;
     private Usuario usuario;
-    private IUsuario usuarioDao;
+    private IUsuario usuarioDAO;
 
     public ControladorUsuario(VistaUsuario vistaUsuario) {
         this.vistaUsuario = vistaUsuario;
-        this.usuarioDao = new UsuarioDao();
+        this.usuarioDAO = new UsuarioDAO();
     }
 
     public void registrar() {
         usuario = vistaUsuario.crearUsuario();
-        usuarioDao.create(usuario);
+        usuarioDAO.create(usuario);
     }
 
     public void comprobarUsuario(String correo, String contraseña) {
