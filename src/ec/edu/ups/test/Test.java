@@ -79,8 +79,7 @@ public class Test {
                                 controla.verTelefono();
                                 break;
                             case 5:
-                                System.out.println("Listar teléfono");
-                                
+                                System.out.println("Listar teléfono");    
                                 break;
                             default:
                                 m2 = false;
