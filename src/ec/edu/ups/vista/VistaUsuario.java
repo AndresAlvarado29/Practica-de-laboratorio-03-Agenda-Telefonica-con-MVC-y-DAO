@@ -32,6 +32,27 @@ public Usuario crearUsuario(){
     String contraseña = escribir.next();
 return new Usuario(cedula, nombre, apellido, correo, contraseña);
 }
+public Usuario actualizarUsuario(){
+escribir = new Scanner(System.in);
+    System.out.println("Ingrese la cedula del usuario que desea actualizar");
+    String cedula = escribir.next();
+    System.out.println("Ingrese los nuevos datos");
+    System.out.println("Ingrese el nombre");
+    String nombre = escribir.next();
+    System.out.println("Ingrese el apellido");
+    String apellido= escribir.next();
+    System.out.println("Ingrese correo electronico");
+    String correo = escribir.next();
+    System.out.println("Ingrese una contraseña");
+    String contraseña = escribir.next();
+    return new Usuario(cedula, nombre, apellido, correo, contraseña);
+}
+public Usuario eliminarUsuario(){
+escribir = new Scanner(System.in);
+    System.out.println("Ingrese la cedula del usuario que desea eliminar");
+    String cedula= escribir.next();
+    return new Usuario(cedula, null, null, null, null);
+}
 
 public void verUsuario(Usuario usuario){
     System.out.println("Datos del usuario:"+ usuario);

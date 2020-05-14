@@ -5,6 +5,7 @@
  */
 package ec.edu.ups.modelo;
 
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -18,6 +19,7 @@ public class Usuario {
     private String apellido;
     private String correo;
     private String contraseña;
+    private List<Telefono> telefonos;
 
     public Usuario() {
     }
@@ -68,6 +70,29 @@ public class Usuario {
 
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
+    }
+     public void agregarTelefono(Telefono telefono){
+    telefonos.add(telefono);
+    }
+    public void actualizarTelefono(Telefono telefono){
+     if (telefonos.contains(telefono)) {
+            int index = telefonos.indexOf(telefono);
+            telefonos.set(index, telefono);
+        }
+     
+    }
+    public void eliminarTelefono(Telefono telefono){
+        if (telefonos.contains(telefono)) {
+            int index = telefonos.indexOf(telefono);
+            telefonos.remove(index);
+        }
+        
+        }
+    public List<Telefono> listarTelefono(){
+        return telefonos;   
+     }
+    public Telefono buscar(int codigo){
+    return telefonos.get(codigo);
     }
 
     @Override
