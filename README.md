@@ -67,7 +67,9 @@ Listar telefonos dentro de usuario
 
 3. Realizar varios commits en la herramienta GitHub que demuestren el desarrollo de la aplicación desde principio a fin. 
 
-![image](https://user-images.githubusercontent.com/65028395/82041211-6c40a900-966d-11ea-848e-28ddb64e6e64.png)
+
+
+![image](https://user-images.githubusercontent.com/65028395/82046919-78c9ff00-9677-11ea-89c4-c9b014eaa96f.png)
 
 4. Implementar el README del repositorio del proyecto con la misma información del informe de la práctica (incluidas las imágenes y versiones de las herramientas).
 
