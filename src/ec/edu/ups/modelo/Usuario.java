@@ -5,6 +5,7 @@
  */
 package ec.edu.ups.modelo;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -30,6 +31,7 @@ public class Usuario {
         this.apellido = apellido;
         this.correo = correo;
         this.contraseña = contraseña;
+        telefonos=new ArrayList<>();
     }
 
     public String getCedula() {
@@ -80,6 +82,9 @@ public class Usuario {
             telefonos.set(index, telefono);
         }
      
+    }
+    public List<Telefono> listarTelefonos() {
+        return telefonos;
     }
     public void eliminarTelefono(Telefono telefono){
         if (telefonos.contains(telefono)) {

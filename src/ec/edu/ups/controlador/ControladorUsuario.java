@@ -39,27 +39,31 @@ public class ControladorUsuario {
         usuario = vistaUsuario.crearUsuario();
         usuarioConDAO.create(usuario);
     }
+    public void actualizarUsuario(){
+    usuario=vistaUsuario.actualizarUsuario();
+    usuarioConDAO.update(usuario);
+    }
+    
+    public void eliminarUsuario(){
+    usuario=vistaUsuario.eliminarUsuario();
+    usuarioConDAO.delete(usuario);
+    }
      public void agregarTelefono(){
     int codigo = vistaTelefono.buscarTelefono();
     telefono = telefonoDAO.read(codigo);
     usuario.agregarTelefono(telefono);
     usuarioConDAO.update(usuario);
     }
-
-    public void comprobarUsuario(String correo, String contraseña) {
-
-        if (usuario != null) {
-            if (usuario.getCorreo().equals(correo) && usuario.getContraseña().equals(contraseña)) {
-                System.out.println("Inicio Satisfactorio");
-
-            } else {
-                System.out.println("correo o contraseña incorrecto ");
-            }
-        } else if (usuario == null) {
-            System.out.println("No exise");
-
-        }
-
+     public void  verUsuario(){
+   String cedula = vistaUsuario.buscarUsuario();
+   usuario= usuarioConDAO.read(cedula);
+   vistaUsuario.verUsuario(usuario);
+   }
+     public void listarTelefonos(String cedula) {
+        usuario = usuarioConDAO.read(cedula);
+        System.out.println(usuario.listarTelefonos());
     }
+
+   
 
 }

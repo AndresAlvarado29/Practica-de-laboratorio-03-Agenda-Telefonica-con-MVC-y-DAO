@@ -9,7 +9,6 @@ import ec.edu.ups.controlador.ControladorTelefono;
 import ec.edu.ups.controlador.ControladorUsuario;
 import ec.edu.ups.dao.TelefonoDAO;
 import ec.edu.ups.dao.UsuarioConDAO;
-import ec.edu.ups.modelo.Usuario;
 import ec.edu.ups.vista.VistaTelefono;
 import ec.edu.ups.vista.VistaUsuario;
 import java.util.Scanner;
@@ -49,8 +48,6 @@ public class Test {
                     String correo = escribir.next();
                     System.out.println("Ingrese la contraseña");
                     String contraseña = escribir.next();
-                    control.comprobarUsuario(correo, contraseña);
-                    
                     while (m2) {
                          System.out.println("[1]Registrar teléfono");
                         System.out.println("[2]Modificar informacion");
@@ -79,7 +76,16 @@ public class Test {
                                 controla.verTelefono();
                                 break;
                             case 5:
-                                System.out.println("Listar teléfono");    
+                                System.out.println("Listar teléfono");
+                                System.out.println("Ingrese la cedula");
+                                String cedula = escribir.next();
+                                control.listarTelefonos(cedula);
+                                controla.verTelefonos();
+                                break;
+                            case 6:
+                                System.out.println("Mostrar Datos");
+                                control.verUsuario();
+                                controla.verTelefonos();
                                 break;
                             default:
                                 m2 = false;

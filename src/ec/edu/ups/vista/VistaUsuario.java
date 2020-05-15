@@ -53,6 +53,12 @@ escribir = new Scanner(System.in);
     String cedula= escribir.next();
     return new Usuario(cedula, null, null, null, null);
 }
+public String buscarUsuario(){
+  escribir = new Scanner(System.in);
+      System.out.println("Ingresa la cedula del usuario");
+      String cedula = escribir.next();
+      return cedula;
+  }
 
 public void verUsuario(Usuario usuario){
     System.out.println("Datos del usuario:"+ usuario);
