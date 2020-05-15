@@ -82,11 +82,7 @@ public class Test {
                                 control.listarTelefonos(cedula);
                                 controla.verTelefonos();
                                 break;
-                            case 6:
-                                System.out.println("Mostrar Datos");
-                                control.verUsuario();
-                                controla.verTelefonos();
-                                break;
+                            
                             default:
                                 m2 = false;
                                 break;
